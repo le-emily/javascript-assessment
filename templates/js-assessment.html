@@ -205,7 +205,8 @@
   Make the classic "guess-a-number-between-1-and-100" in JavaScript.
 </p>
 <p>
-  The game should start when the user presses the play button. The function should first disable the button. The function should then pick a random integer from 1 to 100. Use the div with id 'number-guessing-msg' to ask the user to guess a number. This div will also display whether the guess was too high or too low. Once the user guesses the right number, three things should happen: first, the div should congratulate the player; second, the form should be disabled; third, the play button should be re-enabled.
+  The game should start when the user presses the play button. The function should first disable the button. The function should then pick a 
+  integer from 1 to 100. Use the div with id 'number-guessing-msg' to ask the user to guess a number. This div will also display whether the guess was too high or too low. Once the user guesses the right number, three things should happen: first, the div should congratulate the player; second, the form should be disabled; third, the play button should be re-enabled.
 </p>
 
 <fieldset>
@@ -224,7 +225,7 @@
   var randomNumber;
   function playGame(evt) {
 
-    randomNumber = Math.floor(Math.random() * 100);
+    randomNumber = Math.floor(Math.random() * 99) + 1
 
     // disable play button until player wins
     $("#play-guessing-game").prop("disabled", true);
